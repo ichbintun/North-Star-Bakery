@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Send North Star Bakery an inquiry or pre-order request and find our location and hours.">
+    <title>Contact and Pre-Orders | North Star Bakery</title>
+  </head>
+  <body>
+    <a href="#main-content">Skip to main content</a>
+
+    <header>
+      <a href="index.html">
+        <img src="images/bakery-logo.png" alt="North Star Bakery logo, return to the home page" width="160" height="160">
+      </a>
+      <p><strong>North Star Bakery</strong> &mdash; Handmade in the neighborhood, every morning.</p>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Our Products</a></li>
+          <li><a href="about.html">About the Bakery</a></li>
+          <li><a href="contact.html" aria-current="page">Contact and Pre-Orders</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <h1>Contact and Pre-Orders</h1>
+      <p>Have a question, or want to reserve something for pickup? Fill out the form below and we will reply by email within one business day. Payment is collected at pickup, so no online checkout is needed.</p>
+
+      <section aria-labelledby="form-heading">
+        <h2 id="form-heading">Inquiry and Pre-Order Request Form</h2>
+        <p>Fields marked with an asterisk (*) are required.</p>
+
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Your Contact Information</legend>
+
+            <p>
+              <label for="customer-name">Full name *</label><br>
+              <input type="text" id="customer-name" name="customer-name" autocomplete="name" minlength="2" maxlength="60" required>
+            </p>
+
+            <p>
+              <label for="customer-email">Email address *</label><br>
+              <input type="email" id="customer-email" name="customer-email" autocomplete="email" placeholder="you@example.com" required>
+            </p>
+
+            <p>
+              <label for="customer-phone">Phone number (optional)</label><br>
+              <input type="tel" id="customer-phone" name="customer-phone" autocomplete="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-555-0142" aria-describedby="phone-hint"><br>
+              <small id="phone-hint">Format: 555-555-0142</small>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Request Type</legend>
+
+            <p>
+              <input type="radio" id="type-preorder" name="request-type" value="pre-order" required>
+              <label for="type-preorder">Pre-order for pickup</label>
+            </p>
+
+            <p>
+              <input type="radio" id="type-event" name="request-type" value="event-order">
+              <label for="type-event">Event or custom cake inquiry</label>
+            </p>
+
+            <p>
+              <input type="radio" id="type-question" name="request-type" value="general-question">
+              <label for="type-question">General question</label>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Order Details</legend>
+
+            <p>
+              <label for="pickup-date">Pickup date *</label><br>
+              <input type="date" id="pickup-date" name="pickup-date" min="2026-01-01" aria-describedby="date-hint" required><br>
+              <small id="date-hint">We are closed on Mondays. Custom cakes need at least two weeks of notice.</small>
+            </p>
+
+            <p>
+              <label for="product-category">Product category</label><br>
+              <select id="product-category" name="product-category">
+                <option value="">Choose a category</option>
+                <option value="breads">Breads</option>
+                <option value="pastries">Pastries</option>
+                <option value="cakes">Cakes</option>
+                <option value="mixed">A mix of items</option>
+              </select>
+            </p>
+
+            <p>
+              <label for="item-details">Item details *</label><br>
+              <textarea id="item-details" name="item-details" rows="5" cols="40" minlength="10" maxlength="500" placeholder="Example: 2 Signature Loaves and 6 butter croissants" required></textarea>
+            </p>
+
+            <p>
+              <label for="allergy-notes">Allergy notes (if applicable)</label><br>
+              <textarea id="allergy-notes" name="allergy-notes" rows="3" cols="40" maxlength="300" aria-describedby="allergy-hint"></textarea><br>
+              <small id="allergy-hint">Our kitchen handles wheat, milk, eggs, and tree nuts. Tell us about any allergies so we can advise you.</small>
+            </p>
+          </fieldset>
+
+          <p>
+            <button type="submit">Send request</button>
+            <button type="reset">Clear form</button>
+          </p>
+        </form>
+      </section>
+
+      <section aria-labelledby="location-heading">
+        <h2 id="location-heading">Location</h2>
+        <img src="images/bakery-storefront.png" alt="North Star Bakery storefront with a blue awning, located at 214 Maple Street" width="800" height="533">
+        <address>
+          North Star Bakery<br>
+          214 Maple Street<br>
+          Riverton, OH 44101
+        </address>
+        <p>We are two blocks east of the Riverton train station. Free street parking is available on Maple Street, and the entrance is step-free.</p>
+        <p>Phone: <a href="tel:+15555550142">(555) 555-0142</a></p>
+        <p>Email: <a href="mailto:hello@northstarbakery.example">hello@northstarbakery.example</a></p>
+      </section>
+
+      <section aria-labelledby="hours-heading">
+        <h2 id="hours-heading">Hours of Operation</h2>
+        <table>
+          <caption>Weekly bakery hours</caption>
+          <thead>
+            <tr>
+              <th scope="col">Day</th>
+              <th scope="col">Hours</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Monday</th>
+              <td>Closed</td>
+            </tr>
+            <tr>
+              <th scope="row">Tuesday to Friday</th>
+              <td>6:30 a.m. to 6:00 p.m.</td>
+            </tr>
+            <tr>
+              <th scope="row">Saturday</th>
+              <td>7:00 a.m. to 3:00 p.m.</td>
+            </tr>
+            <tr>
+              <th scope="row">Sunday</th>
+              <td>7:00 a.m. to 3:00 p.m.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p><strong>North Star Bakery</strong></p>
+      <address>
+        214 Maple Street, Riverton, OH 44101<br>
+        Phone: <a href="tel:+15555550142">(555) 555-0142</a><br>
+        Email: <a href="mailto:hello@northstarbakery.example">hello@northstarbakery.example</a>
+      </address>
+      <p>Open Tuesday to Friday 6:30 a.m. to 6:00 p.m., Saturday and Sunday 7:00 a.m. to 3:00 p.m. Closed Monday.</p>
+      <p><small>&copy; 2026 North Star Bakery. All rights reserved.</small></p>
+    </footer>
+  </body>
+</html>
