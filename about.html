@@ -5,36 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn the story of North Star Bakery, our local sourcing philosophy, and the team behind the counter.">
     <title>About the Bakery | North Star Bakery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&amp;family=Nunito+Sans:wght@400;700&amp;display=swap">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <a href="#main-content">Skip to main content</a>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <header>
-      <a href="index.html">
-        <img src="images/bakery-logo.png" alt="North Star Bakery logo, return to the home page" width="160" height="160">
-      </a>
-      <p><strong>North Star Bakery</strong> &mdash; Handmade in the neighborhood, every morning.</p>
-      <nav aria-label="Main navigation">
-        <ul>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html">
+          <img src="images/bakery-logo.png" alt="North Star Bakery logo, return to the home page" width="160" height="160">
+          <span class="brand-text">
+            <strong class="brand-name">North Star Bakery</strong>
+            <span class="brand-tagline">Handmade in the neighborhood, every morning.</span>
+          </span>
+        </a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="products.html">Our Products</a></li>
           <li><a href="about.html" aria-current="page">About the Bakery</a></li>
           <li><a href="contact.html">Contact and Pre-Orders</a></li>
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main id="main-content">
-      <h1>About North Star Bakery</h1>
-
-      <section aria-labelledby="story-heading">
-        <h2 id="story-heading">Our Story</h2>
-        <p>North Star Bakery began in 2011 at a folding table at the Riverton farmers market, where founder Elena Marsh sold twelve loaves of sourdough made from her grandmother&rsquo;s starter. Neighbors kept coming back, and within two years the bakery moved into its permanent home on Maple Street.</p>
-        <p>The name comes from a simple idea: a neighborhood bakery should be a steady place people can always find their way back to. More than a decade later, we still shape every loaf by hand and still know many of our customers by name.</p>
-        <img src="images/bakery-storefront.png" alt="The front of North Star Bakery on Maple Street, where the bakery has welcomed neighbors since 2013" width="800" height="533">
+      <section class="page-intro split" aria-labelledby="page-title">
+        <div class="split-text">
+          <h1 id="page-title">About North Star Bakery</h1>
+          <h2>Our Story</h2>
+          <p>North Star Bakery began in 2011 at a folding table at the Riverton farmers market, where founder Elena Marsh sold twelve loaves of sourdough made from her grandmother&rsquo;s starter. Neighbors kept coming back, and within two years the bakery moved into its permanent home on Maple Street.</p>
+          <p>The name comes from a simple idea: a neighborhood bakery should be a steady place people can always find their way back to. More than a decade later, we still shape every loaf by hand and still know many of our customers by name.</p>
+        </div>
+        <div class="split-media">
+          <img src="images/bakery-storefront.png" alt="The front of North Star Bakery on Maple Street, where the bakery has welcomed neighbors since 2013" width="800" height="533">
+        </div>
       </section>
 
-      <section aria-labelledby="scenes-heading">
+      <section class="section" aria-labelledby="scenes-heading">
         <h2 id="scenes-heading">Behind the Scenes</h2>
         <p>Watch our bakers at work during an early morning bake.</p>
         <video controls width="640" height="360">
@@ -43,49 +55,71 @@
         </video>
       </section>
 
-      <section aria-labelledby="sourcing-heading">
+      <section class="section" aria-labelledby="sourcing-heading">
         <h2 id="sourcing-heading">Our Sourcing Philosophy</h2>
         <p>Good bread starts with good ingredients and good neighbors. We buy as close to home as we can and keep our recipes simple.</p>
-        <ul>
-          <li><strong>Local flour:</strong> stone-ground flour from Miller Creek Mill, 30 miles from our ovens.</li>
-          <li><strong>Farm eggs and dairy:</strong> delivered twice a week from family farms in the county.</li>
-          <li><strong>Seasonal fruit:</strong> our scones and tarts change with what local growers are harvesting.</li>
-          <li><strong>Nothing artificial:</strong> no preservatives, artificial colors, or shortcuts.</li>
-          <li><strong>No waste:</strong> unsold bread is donated each evening to the Riverton Community Pantry.</li>
+        <ul class="card-grid">
+          <li class="card"><h3>Local Flour</h3><p>Stone-ground flour from Miller Creek Mill, 30 miles from our ovens.</p></li>
+          <li class="card"><h3>Farm Eggs and Dairy</h3><p>Delivered twice a week from family farms in the county.</p></li>
+          <li class="card"><h3>Seasonal Fruit</h3><p>Our scones and tarts change with what local growers are harvesting.</p></li>
+          <li class="card"><h3>Nothing Wasted</h3><p>No preservatives or artificial colors, and unsold bread is donated each evening to the Riverton Community Pantry.</p></li>
         </ul>
       </section>
 
-      <section aria-labelledby="staff-heading">
+      <section class="section" aria-labelledby="staff-heading">
         <h2 id="staff-heading">Meet the Team</h2>
-
-        <h3>Elena Marsh, Founder and Head Baker</h3>
-        <p>Elena starts the ovens at 3:00 a.m. and still scores the star on every Signature Loaf herself.</p>
-
-        <h3>Marcus Reed, Pastry Lead</h3>
-        <p>Marcus is the reason the croissants sell out by 9:00 a.m. He trained in Chicago before coming home to Riverton.</p>
-
-        <h3>Priya Shah, Cake Designer</h3>
-        <p>Priya works with families and event planners to design custom cakes for birthdays, weddings, and community celebrations.</p>
-
-        <h3>Tom Alvarez, Front Counter Manager</h3>
-        <p>Tom remembers your usual order and keeps the morning commuter line moving quickly.</p>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Elena Marsh</h3>
+            <p class="role">Founder and Head Baker</p>
+            <p>Elena starts the ovens at 3:00 a.m. and still scores the star on every Signature Loaf herself.</p>
+          </article>
+          <article class="card">
+            <h3>Marcus Reed</h3>
+            <p class="role">Pastry Lead</p>
+            <p>Marcus is the reason the croissants sell out by 9:00 a.m. He trained in Chicago before coming home to Riverton.</p>
+          </article>
+          <article class="card">
+            <h3>Priya Shah</h3>
+            <p class="role">Cake Designer</p>
+            <p>Priya works with families and event planners to design custom cakes for birthdays, weddings, and community celebrations.</p>
+          </article>
+          <article class="card">
+            <h3>Tom Alvarez</h3>
+            <p class="role">Front Counter Manager</p>
+            <p>Tom remembers your usual order and keeps the morning commuter line moving quickly.</p>
+          </article>
+        </div>
       </section>
 
-      <section aria-labelledby="visit-heading">
+      <section class="section info-band" aria-labelledby="visit-heading">
         <h2 id="visit-heading">Come Say Hello</h2>
-        <p>We would love to bake for you. <a href="products.html">See what we bake</a> or <a href="contact.html">send us an inquiry or pre-order request</a>.</p>
+        <p>We would love to bake for you.</p>
+        <p class="button-row">
+          <a class="button" href="contact.html">Send an inquiry or pre-order</a>
+          <a class="button button-outline" href="products.html">See what we bake</a>
+        </p>
       </section>
     </main>
 
-    <footer>
-      <p><strong>North Star Bakery</strong></p>
-      <address>
-        214 Maple Street, Riverton, OH 44101<br>
-        Phone: <a href="tel:+15555550142">(555) 555-0142</a><br>
-        Email: <a href="mailto:hello@northstarbakery.example">hello@northstarbakery.example</a>
-      </address>
-      <p>Open Tuesday to Friday 6:30 a.m. to 6:00 p.m., Saturday and Sunday 7:00 a.m. to 3:00 p.m. Closed Monday.</p>
-      <p><small>&copy; 2026 North Star Bakery. All rights reserved.</small></p>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <p class="footer-title">North Star Bakery</p>
+          <address>
+            214 Maple Street, Riverton, OH 44101<br>
+            Phone: <a href="tel:+15555550142">(555) 555-0142</a><br>
+            Email: <a href="mailto:hello@northstarbakery.example">hello@northstarbakery.example</a>
+          </address>
+        </div>
+        <div class="footer-col">
+          <p class="footer-title">Hours</p>
+          <p>Tuesday to Friday: 6:30 a.m. to 6:00 p.m.<br>
+          Saturday and Sunday: 7:00 a.m. to 3:00 p.m.<br>
+          Monday: Closed</p>
+        </div>
+      </div>
+      <p class="copyright"><small>&copy; 2026 North Star Bakery. All rights reserved.</small></p>
     </footer>
   </body>
 </html>
