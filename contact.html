@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&amp;family=Nunito+Sans:wght@400;700&amp;display=swap">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -44,25 +45,31 @@
         <section class="section form-panel" aria-labelledby="form-heading">
           <h2 id="form-heading">Inquiry and Pre-Order Request Form</h2>
           <p>Fields marked with an asterisk (*) are required.</p>
+          <p id="prefill-notice" class="notice" hidden></p>
+          <div id="form-summary" class="form-summary" role="alert" tabindex="-1" hidden></div>
+          <div id="form-success" class="form-success" role="status" tabindex="-1" hidden></div>
 
-          <form action="#" method="post">
+          <form id="preorder-form" action="#" method="post" novalidate>
             <fieldset>
               <legend>Your Contact Information</legend>
 
               <div class="field">
                 <label for="customer-name">Full name *</label>
                 <input type="text" id="customer-name" name="customer-name" autocomplete="name" minlength="2" maxlength="60" required>
+                <p class="error-message" id="customer-name-error" aria-live="polite"></p>
               </div>
 
               <div class="field">
                 <label for="customer-email">Email address *</label>
                 <input type="email" id="customer-email" name="customer-email" autocomplete="email" placeholder="you@example.com" required>
+                <p class="error-message" id="customer-email-error" aria-live="polite"></p>
               </div>
 
               <div class="field">
                 <label for="customer-phone">Phone number (optional)</label>
                 <input type="tel" id="customer-phone" name="customer-phone" autocomplete="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="555-555-0142" aria-describedby="phone-hint">
                 <small id="phone-hint" class="hint">Format: 555-555-0142</small>
+                <p class="error-message" id="customer-phone-error" aria-live="polite"></p>
               </div>
             </fieldset>
 
@@ -83,6 +90,7 @@
                 <input type="radio" id="type-question" name="request-type" value="general-question">
                 <label for="type-question">General question</label>
               </div>
+              <p class="error-message" id="request-type-error" aria-live="polite"></p>
             </fieldset>
 
             <fieldset>
@@ -92,6 +100,7 @@
                 <label for="pickup-date">Pickup date *</label>
                 <input type="date" id="pickup-date" name="pickup-date" min="2026-01-01" aria-describedby="date-hint" required>
                 <small id="date-hint" class="hint">We are closed on Mondays. Custom cakes need at least two weeks of notice.</small>
+                <p class="error-message" id="pickup-date-error" aria-live="polite"></p>
               </div>
 
               <div class="field">
@@ -108,6 +117,7 @@
               <div class="field">
                 <label for="item-details">Item details *</label>
                 <textarea id="item-details" name="item-details" rows="5" minlength="10" maxlength="500" placeholder="Example: 2 Signature Loaves and 6 butter croissants" required></textarea>
+                <p class="error-message" id="item-details-error" aria-live="polite"></p>
               </div>
 
               <div class="field">
@@ -116,6 +126,13 @@
                 <small id="allergy-hint" class="hint">Our kitchen handles wheat, milk, eggs, and tree nuts. Tell us about any allergies so we can advise you.</small>
               </div>
             </fieldset>
+
+            <div class="field remember-field">
+              <div class="choice">
+                <input type="checkbox" id="remember-me" name="remember-me" checked>
+                <label for="remember-me">Remember my name and email on this device</label>
+              </div>
+            </div>
 
             <div class="button-row">
               <button type="submit" class="button">Send request</button>
